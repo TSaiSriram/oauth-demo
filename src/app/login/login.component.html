@@ -1,0 +1,10 @@
+<div id="signup">
+  <button class="loginBtn loginBtn--google" (click)="Login()" *ngIf="!token">
+    Login with Google
+  </button>
+  <button (click)="Logout()" *ngIf="token">Logout</button>
+</div>
+<div *ngIf="token">
+  <p>{{userData.name}}</p>
+  <p>{{userData.email}}</p>
+</div>
